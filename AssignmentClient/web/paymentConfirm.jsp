@@ -9,29 +9,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <title>JSP Page</title>
     </head>
     <body>
+        <div class="container col-4">
         <form action="NewPayment">
-            <h1><span>NEW</span><lable>Payment</lable></h1>
+            <h1 class="text-center"><span>NEW</span><lable>Payment</lable></h1>
             <div class="inset">
                 <input type="hidden" value="<%=request.getParameter("id")%>" name="id"/>
-                <div>Partner ID: <%=request.getParameter("partnerId")%> </div><br>
+                <div  class="form-group">Partner ID: <%=request.getParameter("partnerId")%> </div><br>
                 <input type="hidden" value="<%=request.getParameter("partnerId")%>" name="partnerId"/>
 
-                <div>Bill ID: <%=request.getParameter("billId")%></div><br>
+                <div class="form-group">Bill ID: <%=request.getParameter("billId")%></div><br>
                 <input type="hidden" value="<%=request.getParameter("billId")%>" name="billId"/>
 
-                <div>Account ID: <%=request.getParameter("accountId")%></div><br>
+                <div class="form-group">Account ID: <%=request.getParameter("accountId")%></div><br>
                 <input type="hidden" value="<%=request.getParameter("accountId")%>" name="accountId"/>
 
-                <div>Partner's PIN Code: <%=request.getParameter("accountPin")%></div><br>
+                <div class="form-group">Partner's PIN Code: <%=request.getParameter("accountPin")%></div><br>
                 <input type="hidden" value="<%=request.getParameter("accountPin")%>" name="accountPin"/>
-                <div>Transaction Name: <%=request.getParameter("transactionName")%></div><br>
+                <div class="form-group">Transaction Name: <%=request.getParameter("transactionName")%></div><br>
                 <input type="hidden" value="<%=request.getParameter("transactionName")%>" name="name"/>
-                <div>Payment Amount: <%=request.getParameter("transactionAmount")%> (VND)</div><br>
+                <div class="form-group">Payment Amount: <%=request.getParameter("transactionAmount")%> (VND)</div><br>
                 <input type="hidden" value="<%=request.getParameter("transactionAmount")%>" name="transactionAmount"/>
-                <div>Fee Payer: <%=request.getParameter("feePayer")%></div><br>
+                <div class="form-group">Fee Payer: <%=request.getParameter("feePayer")%></div><br>
                 <%
                     int transactionAmount = Integer.parseInt(request.getParameter("transactionAmount"));
                     int fee;
@@ -56,7 +58,7 @@
 //                    request.setAttribute("name", request.getParameter("transactionName"));
 //                    request.setAttribute("fee", finalFee);
 %>
-                <div>Payment Fee: <%=finalFee%></div><br>
+                <div class="form-group">Payment Fee: <%=finalFee%></div><br>
                 <input type="hidden" value="<%=finalFee%>" name="fee"/>
                 <%
                     String receiveAmount;
@@ -73,12 +75,18 @@
 //                    request.setAttribute("receiveAmount", receiveAmount);
 //                    request.setAttribute("sendAmount", sendAmount);
 %>
-                <div>Receive Amount: <%=receiveAmount%></div><br>
+                <div class="form-group">Receive Amount: <%=receiveAmount%></div><br>
                 <input type="hidden" value="<%=receiveAmount%>" name="receiveAmount"/>
-                <div>Send Amount: <%=sendAmount%></div><br>
+                <div class="form-group">Send Amount: <%=sendAmount%></div><br>
                 <input type="hidden" value="<%=sendAmount%>" name="sendAmount"/>
-                <input type="submit" value="Submit"/>
+                <input type="submit" class="btn btn-success col-12" value="Submit"/>
             </div><br>
         </form>
+                <form>
+                <input type="hidden" value="<%=request.getParameter("id")%>" name="id"/>
+                <input type="hidden" value="<%=request.getParameter("name")%>" name="name"/>
+                <input type="submit" class="btn btn-success col-12" value="Cancel"/>
+                </form>
+        </div>
     </body>
 </html>

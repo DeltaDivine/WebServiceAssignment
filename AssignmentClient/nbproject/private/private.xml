@@ -5,9 +5,11 @@
         <group>
             <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/web/menu.jsp</file>
             <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/web/sendHistory.jsp</file>
-            <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/src/java/controller/SendHistoryServlet.java</file>
+            <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/web/paymentConfirm.jsp</file>
+            <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/src/java/controller/LoginServlet.java</file>
             <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/web/receiveHistory.jsp</file>
-            <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/src/java/controller/ReceiveHistoryServlet.java</file>
+            <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/web/index.jsp</file>
+            <file>file:/C:/Users/DeltaDivine/Documents/NetBeansProjects/AssignmentClient/web/payment.jsp</file>
         </group>
     </open-files>
 </project-private>

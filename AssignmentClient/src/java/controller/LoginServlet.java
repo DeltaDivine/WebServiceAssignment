@@ -42,6 +42,7 @@ public class LoginServlet extends HttpServlet {
            User u = (User) client.find_XML(User.class, id);
            request.setAttribute("id", u.getId().toString());
            request.setAttribute("name", u.getName());
+           request.setAttribute("balance", Integer.toString(u.getBalance()));
            
            request.getRequestDispatcher("/menu.jsp").forward(request, response);
     }
